@@ -11,4 +11,4 @@ url = f"{base}?$where={quote(where_clause)}&$limit=5000"
 print("Starting request...")
 data = pd.read_csv(url)
 print("Done!")
-print(data.head())
+print(data)
