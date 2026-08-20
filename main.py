@@ -17,7 +17,8 @@ url = f"{base}?$where={quote(where_clause)}&$limit=5000"    #⬅️ API + filter
 
 
 df = pd.read_csv(url)
-print(type(df))
+print(df.info())
+# print(df.head())
 
 
 # NOTE:
