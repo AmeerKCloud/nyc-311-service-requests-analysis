@@ -5,19 +5,20 @@ base = "https://data.cityofnewyork.us/resource/erm2-nwe9.csv"   #⬅️ SODA2 AP
 
 where_clause = "created_date between '2024-01-01T00:00:00' and '2024-12-31T23:59:59' AND borough='BROOKLYN'"    #⬅️ Filter requirements.
 
-url = f"{base}?$where={quote(where_clause)}&$limit=5000"    #⬅️ API + filter reqs to reduce size of massive dataset down to relevant data only.
+url = f"{base}?$where={quote(where_clause)}&$limit=100000"    #⬅️ API + filter reqs to reduce size of massive dataset down to relevant data only.
 
 # print("Starting request...")        #⬅️ Test to ensure python script is running.
-df = pd.read_csv(url)             #⬅️ Any delay in this loading can b either due 2 script or network/request issue.
+df = pd.read_csv(url)                 #⬅️ Any delay in this loading can b either due 2 script or network/request issue.
 # print("Done!")                      #⬅️ Test to ensure python script is running.
 
-print(df.head())                  #⬅️ '.head()' method retrieves & displays first few rows.
+# print(df.head())                  #⬅️ '.head()' method retrieves & displays first few rows.
 
+print(df.columns.tolist())
 
 # print(df[df.agency == "NYPD"])  #⬅️ Retrieves all rows containing NYPD keyword.
 
 
-print(pd.__version__)           #⬅️ Checking to see ur current pandas version.
+# print(pd.__version__)           #⬅️ Checking to see ur current pandas version.
 
 
 # NOTE:
@@ -25,3 +26,32 @@ print(pd.__version__)           #⬅️ Checking to see ur current pandas versio
 #   - If URL's contain raw spaces, then API will not load ur requested data with filtered requirements. Error mssg will display on terminal.
 
 # saved to github.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
