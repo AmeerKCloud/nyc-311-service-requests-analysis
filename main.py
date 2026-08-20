@@ -10,11 +10,14 @@ url = f"{base}?$where={quote(where_clause)}&$limit=5000"    #⬅️ API + filter
 # data = pd.read_csv(url)
 # print(data)
 
-print("Starting request...")
-data = pd.read_csv(url)
-print("Done!")
-print(data[data.agency == "NYPD"])  #⬅️
+# print("Starting request...")
+# data = pd.read_csv(url)
+# print("Done!")
+# print(data[data.agency == "NYPD"])  #⬅️
 
+
+data = pd.read_csv(url)
+print(type(data))
 
 
 # NOTE:
