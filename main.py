@@ -8,7 +8,7 @@ where_clause = "created_date between '2024-01-01T00:00:00' and '2024-12-31T23:59
 url = f"{base}?$where={quote(where_clause)}&$limit=100000"    #⬅️ API + filter reqs to reduce size of massive dataset down to relevant data only.
 
 print("Starting request...")        #⬅️ Test to ensure python script is running.
-df = pd.read_csv(url)                 #⬅️ Any delay in this loading can b either due 2 script or network/request issue.
+df = pd.read_csv(url)               #⬅️ Any delay in this loading can b either due 2 script or network/request issue.
 print("Done!")                      #⬅️ Test to ensure python script is running.
 
 # print(df.head())                  #⬅️ '.head()' method retrieves & displays first few rows.
