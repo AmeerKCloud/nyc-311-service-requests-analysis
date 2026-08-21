@@ -13,7 +13,7 @@ print("Done!")                      #⬅️ Test to ensure python script is runn
 
 # print(df.head())                  #⬅️ '.head()' method retrieves & displays first few rows.
 
-column_headings = df.columns.tolist()
+column_headings = df.columns.tolist()    #⬅️ '.columns' specifically retrieves column heads, & '.tolist()' converts a pandas series into python list.
 
 for heading in column_headings:
     print(heading)
