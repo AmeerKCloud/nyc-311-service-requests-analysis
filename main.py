@@ -29,6 +29,8 @@ import pandas as pd
 
 df = pd.read_csv("2024_brooklyn_nyc_311_complaints.csv")
 
+df[""]
+
 # NOTE:
 # [1] It is necessary to convert spaces into %20 bcuz URLs cant contain raw spaces. They must be percent-encoded (eg, a space becomes %20).
 #   - If URL's contain raw spaces, then API will not load ur requested data with filtered requirements. Error mssg will display on terminal.
