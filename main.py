@@ -13,7 +13,7 @@ print("Done!")                      #⬅️ Test to ensure python script is runn
 
 # print(df.head())                  #⬅️ '.head()' method retrieves & displays first few rows.
 
-print(type(df.columns))         #⬅️ '.columns' specifically retrieves column heads, ie 'index objects',
+print(type(df.columns))         #⬅️ '.columns' is an attribute that returns an Index object (a special pandas data structure) containing all the column labels of the DataFrame.
 
 # column_headings = df.columns.tolist()    #⬅️'.tolist()' converts a pandas index obj. or series data-type into python list.
 
