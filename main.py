@@ -1,11 +1,11 @@
 import pandas as pd
-from urllib.parse import quote  #⬅️ [1] 'quote()' from Python's urllib.parse converts spaces to %20 and safely encodes special characters.
+# from urllib.parse import quote  #⬅️ [1] 'quote()' from Python's urllib.parse converts spaces to %20 and safely encodes special characters.
 #
-base = "https://data.cityofnewyork.us/resource/erm2-nwe9.csv"   #⬅️ SODA2 API URL of complete dataset.
-
-where_clause = "created_date between '2024-01-01T00:00:00' and '2024-12-31T23:59:59' AND borough='BROOKLYN'"    #⬅️ Filter requirements.
-
-url = f"{base}?$where={quote(where_clause)}&$limit=100000"    #⬅️ API + filter reqs to reduce size of massive dataset down to relevant data only.
+# base = "https://data.cityofnewyork.us/resource/erm2-nwe9.csv"   #⬅️ SODA2 API URL of complete dataset.
+#
+# where_clause = "created_date between '2024-01-01T00:00:00' and '2024-12-31T23:59:59' AND borough='BROOKLYN'"    #⬅️ Filter requirements.
+#
+# url = f"{base}?$where={quote(where_clause)}&$limit=100000"    #⬅️ API + filter reqs to reduce size of massive dataset down to relevant data only.
 
 # print("Starting request...")        #⬅️ Test to ensure python script is running.
 # df = pd.read_csv(url)               #⬅️ Any delay in this loading can b either due 2 script or network/request issue.
@@ -17,7 +17,7 @@ url = f"{base}?$where={quote(where_clause)}&$limit=100000"    #⬅️ API + filt
 
 # print(type(df))
 
-# df.to_csv("2024_brooklyn_nyc_311_complaints.csv")
+# df.to_csv("2024_brooklyn_nyc_311_complaints.csv") #⬅️ Converted API imported csv. to a local .csv file in working directory/folder for offline work.
 
 # column_headings = df.columns.tolist()    #⬅️'.tolist()' converts a pandas index obj. or series data-structure into python list.
 
@@ -27,7 +27,7 @@ url = f"{base}?$where={quote(where_clause)}&$limit=100000"    #⬅️ API + filt
 
 #------------------------------------------------------------------------------------------------------------------------------------------
 
-
+df = pd.read_csv("2024_brooklyn_nyc_311_complaints.csv")
 
 # NOTE:
 # [1] It is necessary to convert spaces into %20 bcuz URLs cant contain raw spaces. They must be percent-encoded (eg, a space becomes %20).
