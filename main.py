@@ -17,9 +17,6 @@ print("Done!")                      #⬅️ Test to ensure python script is runn
 
 # column_headings = df.columns.tolist()    #⬅️'.tolist()' converts a pandas index obj. or series data-structure into python list.
 
-# for heading in column_headings:
-#     print(heading)
-
 # print(df[df.agency == "NYPD"])  #⬅️ Retrieves all rows containing NYPD keyword.
 
 
