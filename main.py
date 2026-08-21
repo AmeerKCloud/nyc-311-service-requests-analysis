@@ -13,12 +13,12 @@ print("Done!")                      #⬅️ Test to ensure python script is runn
 
 # print(df.head())                  #⬅️ '.head()' method retrieves & displays first few rows.
 
-# column_headings = df.columns.tolist()    #⬅️ '.columns' specifically retrieves column heads, ie 'index objects', & '.tolist()' converts a pandas index obj. into python list.
+print(type(df.columns))         #⬅️ '.columns' specifically retrieves column heads, ie 'index objects',
+
+# column_headings = df.columns.tolist()    #⬅️'.tolist()' converts a pandas index obj. or series data-type into python list.
 
 # for heading in column_headings:
 #     print(heading)
-
-print(type(df.columns))
 
 # print(df[df.agency == "NYPD"])  #⬅️ Retrieves all rows containing NYPD keyword.
 
