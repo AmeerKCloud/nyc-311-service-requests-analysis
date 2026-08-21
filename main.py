@@ -15,10 +15,13 @@ print("Done!")                      #⬅️ Test to ensure python script is runn
 
 # print(type(df.columns))         #⬅️ '.columns' attribute returns an Index object (a special pandas data structure) containing all the column labels of the DataFrame.
 
+# print(type(df))
+
+df.to_csv("2024_brooklyn_nyc_311_complaints.csv")
+
 # column_headings = df.columns.tolist()    #⬅️'.tolist()' converts a pandas index obj. or series data-structure into python list.
 
 # print(df[df.agency == "NYPD"])  #⬅️ Retrieves all rows containing NYPD keyword.
-
 
 # print(pd.__version__)           #⬅️ Checking to see ur current pandas version.
 
