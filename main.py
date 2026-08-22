@@ -29,7 +29,24 @@ import pandas as pd
 
 df = pd.read_csv("2024_brooklyn_nyc_311_complaints.csv")
 
-df[""]
+# print(df.shape)
+# print(df.info())
+# print(df.dtypes)
+
+# complaints_list = df.complaint_type.to_list()
+# print(type(complaints_list))
+# print(len(complaints_list))
+
+complaints_dict = df.complaint_type.to_dict()
+# print(complaints_dict)
+
+for key, value in complaints_dict.items():
+    print(f"{key} : {value}")
+
+# for complaint in complaints:
+#     print(complaint)
+
+
 
 # NOTE:
 # [1] It is necessary to convert spaces into %20 bcuz URLs cant contain raw spaces. They must be percent-encoded (eg, a space becomes %20).
