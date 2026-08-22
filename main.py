@@ -25,6 +25,11 @@ import pandas as pd
 
 # print(pd.__version__)           #⬅️ Checking to see ur current pandas version.
 
+
+# NOTE:
+# [1] It is necessary to convert spaces into %20 bcuz URLs cant contain raw spaces. They must be percent-encoded (eg, a space becomes %20).
+#   - If URL's contain raw spaces, then API will not load ur requested data with filtered requirements. Error mssg will display on terminal.
+
 #------------------------------------------------------------------------------------------------------------------------------------------
 
 df = pd.read_csv("2024_brooklyn_nyc_311_complaints.csv")
@@ -47,10 +52,6 @@ for key, value in complaints_dict.items():
 #     print(complaint)
 
 
-
-# NOTE:
-# [1] It is necessary to convert spaces into %20 bcuz URLs cant contain raw spaces. They must be percent-encoded (eg, a space becomes %20).
-#   - If URL's contain raw spaces, then API will not load ur requested data with filtered requirements. Error mssg will display on terminal.
 
 # saved to gitHub.
 
